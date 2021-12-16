@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fm.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:background="@color/teal_200"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="5sp"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="300sp"
+                    android:layout_height="300sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10sp"
+                    android:src="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="name"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/nim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="dfafdf"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/prodi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="dsadfa"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="dsadfa"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="20sp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/teal_200"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:text=" No Phone"
+                        android:textSize="40sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="end|bottom"
+        android:gravity="end|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/log_out"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="2sp"
+            android:background="@drawable/ic_logout"/>
+    </LinearLayout>
+</FrameLayout>

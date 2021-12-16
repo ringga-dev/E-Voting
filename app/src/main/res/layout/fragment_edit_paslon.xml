@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fm.EditPaslonFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:background="@color/teal_200"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_margin="5sp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_pertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lihat Pertanyaan"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center_vertical|end"
+                android:padding="5sp"
+                android:fontFamily="@font/aclonica"
+                android:textColor="#FFDD00"
+                android:background="#3EFF0000"/>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="390sp"
+                    android:layout_height="390sp"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10sp"
+                        android:padding="10sp"
+                        android:src="@color/black"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_presiden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:layout_marginTop="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/app_name"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/tv_wakil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="Nim"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/tv_urutan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="Nomor 1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_stts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10sp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="Status"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="20sp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/teal_200"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:text="Visi"
+                        android:textSize="40sp" />
+
+
+                    <TextView
+                        android:id="@+id/visi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="Visi"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="20sp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/teal_200"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center"
+                        android:text=" Misi"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/misi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="Visi"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</FrameLayout>

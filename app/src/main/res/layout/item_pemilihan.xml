@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10sp"
+    android:layout_margin="10sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/im_paslon"
+            android:layout_margin="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:src="@drawable/ic_user"
+            android:layout_gravity="center"
+            app:civ_border_color="#4DEBFA"/>
+
+        <TextView
+            android:id="@+id/tv_presiden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Ringga Septia Pribadi"
+            android:gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+
+
+        <TextView
+            android:id="@+id/tv_wakil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="201713005"
+            android:gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_nomor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="Nomor 1"
+            android:gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pilih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:layout_marginTop="15sp"
+                android:text="Pilih "
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
