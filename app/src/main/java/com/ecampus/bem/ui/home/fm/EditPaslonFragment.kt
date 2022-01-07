@@ -1,11 +1,16 @@
 package com.ecampus.bem.ui.home.fm
 
+import android.app.AlertDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Html
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
@@ -32,6 +37,7 @@ class EditPaslonFragment : Fragment() {
     private var _binding: FragmentEditPaslonBinding? = null
     private val binding get() = _binding!!
     private lateinit var id_paslon: String
+    private var data_id: PaslonRespon? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -55,7 +61,7 @@ class EditPaslonFragment : Fragment() {
                 .replace(R.id.fragment_container, fragmen).commit()
         }
 
-        val data = SharedPrefManager.getInstance(requireContext())!!.user
+        var data = SharedPrefManager.getInstance(requireContext())!!.user
         RetrofitClient.instance.getDataPaslon(data.nim!!)
             .enqueue(object : Callback<BaseRespon<PaslonRespon>> {
                 override fun onResponse(
@@ -63,6 +69,7 @@ class EditPaslonFragment : Fragment() {
                     response: Response<BaseRespon<PaslonRespon>>,
                 ) {
                     val res = response.body()?.data
+                    data_id = res
 
                     binding.tvPresiden.text = "${res?.nama_presiden} (${res?.nim_presiden})"
                     binding.tvWakil.text = "Wakil : ${res?.nama_wakil} (${res?.nim_wakil})"
@@ -72,7 +79,7 @@ class EditPaslonFragment : Fragment() {
                     binding.misi.text = Html.fromHtml("${res?.misi}")
                     id_paslon = res?.id!!
                     Glide.with(requireContext())
-                        .load(RetrofitClient.BASE_URL + "assets/image/" + res?.image)
+                        .load(RetrofitClient.BASE_URL + "assets/image/" + res.image)
                         .into(binding.image)
                 }
 
@@ -81,11 +88,46 @@ class EditPaslonFragment : Fragment() {
                 }
 
             })
+        binding.editVisi.setOnClickListener {
+            showCustomAlertVisi("edit_visi")
+        }
+        binding.editMisi.setOnClickListener {
+            showCustomAlertVisi("edit_misis")
+        }
+
 
         binding.back.setOnClickListener {
             requireFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment.newInstance()).commit()
         }
+    }
+
+    private fun showCustomAlertVisi(stts: String) {
+        val data = SharedPrefManager.getInstance(requireContext())!!.user
+        val inflate = layoutInflater
+        val infla_view = inflate.inflate(R.layout.custom_alert_edit_visi, null)
+        val textQues = infla_view.findViewById<EditText>(R.id.visi)
+        val simpan = infla_view.findViewById<Button>(R.id.simpan)
+        val cencel = infla_view.findViewById<Button>(R.id.close)
+
+
+        val alertDialog = AlertDialog.Builder(requireContext())
+        alertDialog.setView(infla_view)
+        alertDialog.setCancelable(false)
+
+        val dialog = alertDialog.create()
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        simpan.setOnClickListener {
+            val text = textQues.text.toString().trim()
+
+
+
+        }
+        cencel.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+
     }
 
 

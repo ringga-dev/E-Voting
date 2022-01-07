@@ -73,7 +73,5 @@ class ListCalonFragment : Fragment() {
             adapter = PaslonAdapter(mutableListOf(), requireContext(), requireFragmentManager())
 
         }
-
-
     }
 }

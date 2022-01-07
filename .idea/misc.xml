@@ -3,18 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/drawable/bg_button.xml" value="0.29259259259259257" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/drawable/ic_password.xml" value="0.25277777777777777" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/drawable/ic_titik.xml" value="0.32685185185185184" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/activity_upload_file.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/auth_activity.xml" value="0.38697916666666665" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/custom_alert_add_ques.xml" value="0.33" />
+        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/custom_alert_edit_visi.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_calon.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_daftar.xml" value="0.33" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_edit.xml" value="0.38697916666666665" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_edit_paslon.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_hasil.xml" value="0.21" />
-        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_list_calon.xml" value="0.33" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_list_ques.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_login.xml" value="0.25" />
@@ -24,6 +27,7 @@
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_ques_stts.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/item_calon.xml" value="0.25" />
+        <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/item_image.xml" value="0.38697916666666665" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/item_pemilihan.xml" value="0.25" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/item_ques.xml" value="0.38697916666666665" />
         <entry key="..\:/web/Comunity Project/EVoting/app/src/main/res/layout/item_ques_user.xml" value="0.25" />

@@ -76,3 +76,11 @@ data class Voting(
 )
 
 
+data class GetImagePaslon(
+    @SerializedName("id") val id: String,
+    @SerializedName("id_paslon") val id_paslon: String,
+    @SerializedName("file_name") val file_name: String,
+)
+
+
+

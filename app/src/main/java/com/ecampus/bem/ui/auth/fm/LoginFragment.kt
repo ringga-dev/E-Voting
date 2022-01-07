@@ -56,13 +56,11 @@ class LoginFragment : Fragment() {
             if (email.isEmpty()) {
                 binding.etEmail.error = "Email required"
                 binding.etEmail.requestFocus()
-//                loading.visibility = View.GONE
                 return@setOnClickListener
             }
             if (pass.isEmpty()) {
                 binding.etPass.error = "Password required"
                 binding.etPass.requestFocus()
-//                loading.visibility = View.GONE
                 return@setOnClickListener
             }
             login(email, pass)
@@ -78,14 +76,17 @@ class LoginFragment : Fragment() {
                     call: Call<BaseRespon<UserRespon>>,
                     response: Response<BaseRespon<UserRespon>>,
                 ) {
-                    val intent = Intent(requireContext(), HomeActivity::class.java)
-                    intent.flags =
-                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    activity?.finish()
-                    startActivity(intent)
+                    if (response.body()?.stts == true){
+                        val intent = Intent(requireContext(), HomeActivity::class.java)
+                        intent.flags =
+                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
 
-                    SharedPrefManager.getInstance(requireContext())!!
-                        .saveUser(response.body()?.data!!)
+                        SharedPrefManager.getInstance(requireContext())!!
+                            .saveUser(response.body()?.data!!)
+                    }else{
+                        Toast.makeText(requireContext(), "${response.body()?.msg}", Toast.LENGTH_LONG).show()
+                    }
                 }
 
                 override fun onFailure(call: Call<BaseRespon<UserRespon>>, t: Throwable) {

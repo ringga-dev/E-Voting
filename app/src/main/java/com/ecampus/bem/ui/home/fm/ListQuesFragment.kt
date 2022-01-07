@@ -5,6 +5,8 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -69,6 +71,15 @@ class ListQuesFragment : Fragment() {
 
 
        viewLis(id_paslon!!)
+
+        val handler = Handler()
+        val runnableCode: Runnable = object : Runnable {
+            override fun run() {
+                viewLis(id_paslon)
+                handler.postDelayed(this, 2000)
+            }
+        }
+        handler.post(runnableCode)
     }
 
     private fun viewLis(id_paslon:String) {

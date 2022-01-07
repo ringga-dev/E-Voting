@@ -95,7 +95,6 @@ class RegisterFragment : Fragment() {
                     if (response.body()?.stts == true) {
                         requireFragmentManager().beginTransaction()
                             .replace(R.id.container, LoginFragment()).commit()
-                        activity?.finish()
                     }
                     Toast.makeText(requireContext(), response.body()?.msg, Toast.LENGTH_SHORT)
                         .show()

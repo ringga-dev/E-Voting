@@ -40,6 +40,8 @@ class ListQuesUserAdapter(
             val data = SharedPrefManager.getInstance(context)!!.user
             if (data.id == lagus[position].id_user.toInt()){
                 binding.card.setCardBackgroundColor(Color.parseColor("#03fc20"))
+            }else{
+                binding.card.setCardBackgroundColor(Color.parseColor("#fffdfc"))
             }
         }
     }

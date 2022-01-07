@@ -1,10 +1,23 @@
 package com.ecampus.bem.data.api
 
-import android.net.Uri
 import com.ecampus.bem.data.model.*
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.http.*
+import retrofit2.http.POST
+import okhttp3.ResponseBody
+
+import retrofit2.http.Multipart
+
+
+
+
+
+
+
 
 interface Api {
     /* POST Method */
@@ -78,16 +91,33 @@ interface Api {
         @Field("soal") soal: String
     ): Call<BaseResponData>
 
+
+    @FormUrlEncoded
+    @POST("UserApi/image_paslon")
+    fun getImagePaslon(
+        @Field("id") id_paslon: String
+    ): Call<BaseRespon<List<GetImagePaslon>>>
+
     /* End POST Method */
 
 
+    /* Multi Upload File */
+
+    @Multipart
+    @POST("UserApi/file_paslon")
+    fun uploadFile(
+        @Part file: MutableList<MultipartBody.Part>,
+        @Part("id") id: RequestBody,
+    ): Call<BaseResponData>
+
+    /* End Multi Upload File */
 
     /* GET Method */
 
     @GET("UserApi/list_paslon")
     fun getPaslon(): Call<BaseRespon<List<PaslonRespon>>>
 
-   @GET("UserApi/list_all_paslon")
+    @GET("UserApi/list_all_paslon")
     fun getPaslonAll(): Call<BaseRespon<List<PaslonRespon>>>
 
     @GET("UserApi/get_ques_stts")
